@@ -50,6 +50,7 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: 0.5s;
+    color: #fff;
 }
 
 .btn:hover {
