@@ -52,7 +52,7 @@ Deployment Process:
 1. Push project to GitHub repository
 2. Open repository settings
 3. Navigate to **Pages**
-4. Select branch: `main`
+4. Select branch: `main` or `master`
 5. Save and publish
 
 What I Learned
