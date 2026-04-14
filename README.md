@@ -38,8 +38,11 @@ Tech Stack
 Project Structure
 food-design-portfolio/
 ├── assets/        # Images, icons, media
+
 ├── css/           # Styling files
+
 ├── js/            # JavaScript functionality
+
 └── index.html     # Main entry file
 
 Deployment
