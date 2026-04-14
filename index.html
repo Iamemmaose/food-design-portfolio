@@ -26,7 +26,7 @@
         <li><a href="#testimonial">testimonial</a></li>
         <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="menubar"><a href="#"><img src="images/menu.png" style="width: 25px; height: 18px;"> </a></div>
+        <div class="menubar"></div>
       
     </div>
   </header>
@@ -215,7 +215,7 @@
         <textarea placeholder="Message"></textarea>
       </div>
       <div class="inputbox">
-        <Input type="submit" value="Send">
+        <input type="submit" value="Send">
       </div>
     </div>
   </section>
@@ -231,8 +231,15 @@
     const header = document.querySelector('header')
     header.classList.toggle('sticky', window.scrollY > 0)
   })
-  
+   
+  const menubar = document.querySelector('.menubar')
+  const navigation = document.querySelector('.navigation')
 
+  menubar.addEventListener('click', function(){
+    menubar.classList.toggle('active')
+    navigation.classList.toggle('active')
+  })
+  
   </script>
 
 

@@ -73,6 +73,7 @@ header.sticky {
 }
 
 header .headercontainer {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,6 +108,16 @@ header .navigation li {
 
 header .menubar {
     display: none;
+    width: 32px;
+    height: 32px;
+    background-image: url("images/menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header.sticky .menubar {
+    filter: invert(1);
 }
 
 
@@ -446,8 +457,8 @@ header .navigation a:hover {
 
 }
 
-@Media (max-width:992px) {
-     header .navigation {
+@media (max-width:992px) {
+    header .navigation {
         display: none;
 
     }
@@ -456,40 +467,96 @@ header .navigation a:hover {
         display: block;
     }
 
+    header .menubar.active {
+        background-image: url(images/close.svg);
+        filter: invert(1);
+    }
+
+    header.sticky .menubar.active {
+        background-image: url(images/close.svg);
+        filter: invert(0);
+    }
+
+    header .navigation.active {
+        position: absolute;
+        top: 50px;
+        right: -85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        width: 102vw;
+        height: 100vh;
+    }
+
+    header .navigation.active li {
+        margin: 20px;
+    }
+
+    header .navigation.active a {
+        color: #000;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    header .navigation.active a:hover {
+        color: red;
+    }
+
     .bannercontent h2 {
-    color: white;
-    font-size: 3rem;
-}
+        color: white;
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
 
+
     .bannercontent h2 {
-        font-size: 2.5em;
+        font-size: 2.5rem;
         margin-top: 70px;
     }
 
     .about p {
-    font-size: 1.5rem;
-    font-weight: 300;
-}
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
 }
 
 
 
 @media (max-width: 600px) {
+    .banner {
+        min-height: 73vh;
+        padding: 10px 50px;
+    }
+
     .bannercontent {
-        width: 312px;
+        width: 400px;
     }
 
     .bannercontent h2 {
-        font-size: 2em;
-        margin-top: 70px;
+        font-size: 1.6rem;
+        margin-top: 10px;
     }
 
     .bannercontent p,
     .bannercontent a {
         font-size: 0.9em;
+        margin-top: 1rem;
+    }
+
+    header {
+        padding: 10px 30px;
+    }
+
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    header .navigation.active {
+        width: 120vw;
     }
 
     .btn {
@@ -615,6 +682,10 @@ header .navigation a:hover {
 
     .testimonial .content .box .text h3 {
         font-size: 0.9em;
+    }
+
+    .title p {
+        font-size: 0.9rem;
     }
 
     .contact {
