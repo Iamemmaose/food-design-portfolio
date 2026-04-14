@@ -67,6 +67,11 @@ header {
     z-index: 1000;
 }
 
+header.sticky {
+    background: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
 header .headercontainer {
     display: flex;
     justify-content: space-between;
@@ -81,6 +86,10 @@ header .logo {
     text-decoration: none;
     font-weight: 700;
     color: white;
+}
+
+header.sticky .logo {
+    color: #000;
 }
 
 header span {
@@ -107,6 +116,10 @@ header .navigation a {
     font-size: 1em;
     font-weight: 100;
     color: white;
+}
+
+header.sticky .navigation a {
+    color: #000;
 }
 
 header .navigation a:hover {
