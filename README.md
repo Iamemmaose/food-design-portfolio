@@ -40,7 +40,7 @@ Project Structure
 * Images
 * index.html 
 * css        
-* js            
+* javascript            
     
 
 Deployment
