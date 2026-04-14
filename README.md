@@ -36,12 +36,11 @@ Tech Stack
 | JavaScript | Interactivity      |
 
 Project Structure
-
-food-design-portfolio
-assets/        # Images, icons, media
-css/           # Styling files
-js/            # JavaScript functionality
-index.html/     # Main entry file
+food-design-portfolio/
+├── assets/        # Images, icons, media
+├── css/           # Styling files
+├── js/            # JavaScript functionality
+└── index.html     # Main entry file
 
 Deployment
 
@@ -75,6 +74,6 @@ Support
 
 If you like this project:
 
-* ⭐ Star this repository
-* 🍴 Fork it for learning
-* 📢 Share feedback for improvements
+* Star this repository
+* Fork it for learning
+* Share feedback for improvements
