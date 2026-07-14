@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!--This is the header and banner section-->
+  <!--This is the header and banner section class="hidden"-->
 
 
   <header>
@@ -27,6 +27,16 @@
         <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="menubar"></div>
+
+        <ul class="menu-nav">
+          <div class="closebar"><img src="images/close.svg" alt="close Icon"></div>
+        <li><a class="menu-link" href="#home">Home</a></li>
+        <li><a class="menu-link" href="#about">About</a></li>
+        <li><a class="menu-link" href="#menu">Menu</a></li>
+        <li><a class="menu-link" href="#expert">Expert</a></li>
+        <li><a class="menu-link" href="#testimonial">testimonial</a></li>
+        <li><a class="menu-link" href="#contact">Contact</a></li>
+        </ul>
       
     </div>
   </header>
@@ -41,7 +51,7 @@
 
 
 
-  <section class="about" id="about">
+  <section class="about hidden" id="about">
     <div class="row">
       <div class="col50">
         <h2 class="titletext"><span>A</span>bout Us</h2>
@@ -55,16 +65,16 @@
         </div>
       </div>
     </div>
-  </section>
+  </section >
 
-  <section class="menu" id="menu">
+  <section class="menu hidden" id="menu">
     <div class="title">
       <h2 class="titletext">Our <span>M</span>enu</h2>
       <p>Seasonal dishes shaped by thoughtful design and flavour-forward presentation.</p>
     </div>
 
     <div class="content">
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/menu1.jpg">
         </div>
@@ -72,7 +82,7 @@
           <h3>Special Salads</h3>
         </div>
       </div>
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/menu2.jpg">
         </div>
@@ -80,7 +90,7 @@
           <h3>Special Soups</h3>
         </div>
       </div>
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/menu3.jpg">
         </div>
@@ -88,7 +98,7 @@
           <h3>Special pasta</h3>
         </div>
       </div>
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/menu4.jpg">
         </div>
@@ -96,7 +106,7 @@
           <h3>Special Salads</h3>
         </div>
       </div>
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/menu5.jpg">
         </div>
@@ -104,7 +114,7 @@
           <h3>Special Soups</h3>
         </div>
       </div>
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/menu6.jpg">
         </div>
@@ -119,14 +129,14 @@
     </div>
   </section>
 
-  <section class="expert" id="expert">
+  <section class="expert hidden" id="expert">
     <div class="title">
       <h2 class="titletext">Our Kitchen<span>E</span>xpert</h2>
       <p>Meet the creative chefs and food stylists who turn flavour into unforgettable brand experiences.</p>
     </div>
 
     <div class="content">
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/expert1.jpg">
         </div>
@@ -134,7 +144,7 @@
           <h3>Chef Amina</h3>
         </div>
       </div>
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/expert2.jpg">
         </div>
@@ -142,15 +152,15 @@
           <h3>Chef Lucas</h3>
         </div>
       </div>
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/expert3.jpg">
         </div>
-        <div class="text">
+        <div class="text hidden">
           <h3>Chef Nia</h3>
         </div>
       </div>
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/expert4.jpg">
         </div>
@@ -162,13 +172,13 @@
   </section>
 
 
-  <section class="testimonial" id="testimonial">
+  <section class="testimonial hidden" id="testimonial">
     <div class="title white">
       <h2 class="titletext">They<span>S</span>aid About Us</h2>
       <p>Trusted by clients who wanted their food brand to feel fresh, elevated, and inviting.</p>
     </div>
     <div class="content">
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/testi1.jpg">
         </div>
@@ -177,7 +187,7 @@
           <h3>Olivia Park</h3>
         </div>
       </div>
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/testi2.jpg">
         </div>
@@ -186,7 +196,7 @@
           <h3>Jamal Rivers</h3>
         </div>
       </div>
-      <div class="box">
+      <div class="box hidden">
         <div class="imgbox">
           <img src="images/testi3.jpg">
         </div>
@@ -198,7 +208,7 @@
     </div>
   </section>
 
-  <section class="contact" id="contact">
+  <section class="contact hidden" id="contact">
     <div class="title">
       <h2 class="titletext"><span>C</span>ontact Us</h2>
       <p>Have a culinary project? Let's work together to build a food brand that looks and feels delicious.</p>
@@ -225,22 +235,8 @@
     <p>Developed by Emma Ose</p>
   </div>
 
-  <script>
 
-  window.addEventListener('scroll', function() {
-    const header = document.querySelector('header')
-    header.classList.toggle('sticky', window.scrollY > 0)
-  })
-   
-  const menubar = document.querySelector('.menubar')
-  const navigation = document.querySelector('.navigation')
-
-  menubar.addEventListener('click', function(){
-    menubar.classList.toggle('active')
-    navigation.classList.toggle('active')
-  })
-  
-  </script>
+  <script src="myscript.js"></script>
 
 
 </body>

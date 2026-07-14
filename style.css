@@ -10,6 +10,17 @@ body {
     min-height: 100vh;
 }
 
+.hidden {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: all 0.5s ease-in;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .banner {
     position: relative;
     width: 100%;
@@ -100,6 +111,10 @@ header span {
 header .navigation {
     display: flex;
 
+}
+
+.menu-nav {
+    display: none;
 }
 
 header .navigation li {
@@ -458,6 +473,15 @@ header .navigation a:hover {
 }
 
 @media (max-width:992px) {
+
+    header {
+        padding: 0px;
+    }
+
+    header .headercontainer {
+        padding: 10px 30px;
+    }
+
     header .navigation {
         display: none;
 
@@ -467,48 +491,66 @@ header .navigation a:hover {
         display: block;
     }
 
-    header .menubar.active {
-        background-image: url(images/close.svg);
-        filter: invert(1);
-    }
-
-    header.sticky .menubar.active {
-        background-image: url(images/close.svg);
-        filter: invert(0);
-    }
-
-    header .navigation.active {
+    header .menu-nav {
+        display: block;
         position: absolute;
-        top: 50px;
-        right: -85px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        top: 0;
+        right: -50%;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
         background: #fff;
-        width: 102vw;
-        height: 100vh;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-radius: 10px 0 0 10px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease-in-out;
     }
 
-    header .navigation.active li {
-        margin: 20px;
+    
+
+
+    header .closebar {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 32px;
+        height: 32px;
     }
 
-    header .navigation.active a {
+    header .closebar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    header .menu-nav li {
+        margin: 20px 0;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    header .menu-nav li a {
+        text-decoration: none;
         color: #000;
         font-size: 1rem;
         font-weight: 500;
+        transition: 0.3s ease-in-out;
     }
 
-    header .navigation.active a:hover {
+    header .menu-nav li a:hover {
         color: red;
     }
+
 
     .bannercontent h2 {
         color: white;
         font-size: 3rem;
     }
+
 }
+
 
 @media (max-width: 768px) {
 
@@ -545,10 +587,6 @@ header .navigation a:hover {
     .bannercontent a {
         font-size: 0.9em;
         margin-top: 1rem;
-    }
-
-    header {
-        padding: 10px 30px;
     }
 
     header .logo {
